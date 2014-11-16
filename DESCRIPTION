@@ -1,4 +1,4 @@
-Package: amazonuserstats
+Package: amazonuserstatr
 Title: Reports on Amazon User Profile Stats
 Version: 0.1
 Authors@R: "Christian G. Warden <cwarden@xerus.org> [aut, cre]"
