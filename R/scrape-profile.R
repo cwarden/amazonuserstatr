@@ -26,7 +26,3 @@ scrape_profile <- function(profileId) {
 		  timestamp = format(Sys.time(), "%F %T %z")
 	)
 }
-
-record_user_info <- function(con, table, userInfo) {
-	dbWriteTable(con, table, as.data.frame(userInfo), row.names = FALSE, append = TRUE)
-}
