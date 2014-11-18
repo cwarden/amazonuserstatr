@@ -18,11 +18,14 @@ scrape_profile <- function(profileId) {
 
 	reviews <- profilePage %>% rvest::html_nodes('.reviews-link') %>% rvest::html_text() %>% extract_number()
 
+	user_name <- profilePage %>% rvest::html_nodes('.profile-name-container') %>% rvest::html_text() %>% stringr::str_trim()
+
 	list(userid = profileId,
 		  rank = ranking,
 		  reviews = reviews,
 		  reviews_voted = reviewsVoted,
 		  reviews_helpful = reviewsHelpful,
-		  timestamp = format(Sys.time(), "%F %T %z")
+		  timestamp = format(Sys.time(), "%F %T %z"),
+		  user_name = user_name
 	)
 }
